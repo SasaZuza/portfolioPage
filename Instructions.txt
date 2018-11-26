@@ -4,7 +4,7 @@ Create JSON file:
 - ENTER: npm init
 - Fill the data inside
 - change inside JSON file 'scripts' part to configure it for using sass
-- ENTER: run npm sass (to watch for sass changes)
+- ENTER: npm run sass (to watch for sass changes)
 
 ----------------------------------------------------------------------------
 
