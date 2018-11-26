@@ -1,0 +1,222 @@
+// Importing partials .scss files
+@import 'config';
+@import 'menu';
+
+
+// Makes everything to be threated like in box-model
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include background;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// Styling of headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400; // '&' represents parent tag of this class (this is nesting in sass)
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2),
+            0.5); // Lighten the color in Sass
+        // First parametar is color we want to lighten and second is how much we want to lighten and opacity
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+// Position fixed means that button for menu is always at the top of page (even when scroling)
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+// Styling main tag and nested classes and tags inside
+
+main {
+    padding: 4rem;
+    // height: 100%;
+    min-height: calc(100vh - 60px);
+    // Puts footer to the bottom of page (sticky footer) 
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
+
+
+
+// About page styling:
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    margin: 0 8% 0 8%;
+    grid-template-areas:
+        'bioimage bio '
+        'job1 job2 ';
+    grid-template-columns: repeat(2, 1fr);
+    // Visual representation of page content
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.3rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+
+    // Styling of those sections
+}
+
+
+// Work and Projects styling
+
+// Sets grid for projects
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    // Image styling and hover over image styling
+    img {
+        width: 100%;
+
+        border: 3px #fff solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+
+// Button Styling
+// Class .btn that has same styling for dark and light button
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        @include easeOut;
+    }
+}
+
+// Special styling that extends from .btn class and adds more effects
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
+}
+
+
+// Contact Page styling
+.boxes {
+    display: flex;
+    flex-wrap: wrap; // When content is to big it goes to the next row
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    // Styling every div basics and hovering
+    div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+}
+
+
+// Footer styling
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+
+@import 'mobile';

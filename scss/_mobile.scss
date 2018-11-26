@@ -1,0 +1,98 @@
+// Here we are using mixins that we created in _config.scss file
+
+// Widescreens
+@include mediaXl {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+
+    // Position text and items on center and sets up margins
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // Sets up menu items and branding across all screen in width
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        // This is after activating show class
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    // menu items take 75% of screen and after activating come from the side
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    // menu branding takes 25% of screen and after activating come from the side
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+
+        // Setting profile image for smaller screen
+        .portrait {
+            background: url('../img/ProfilSmall.jpg');
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    // This styles about page for md devices
+    .about-info {
+        grid-template-areas:
+            'bioimage'
+            'bio'
+            'job1'
+            'job2';
+
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    main {
+        padding: 2rem;
+
+        #home h1 {
+            margin-top: 10vh;
+        }
+
+        .lg-heading {
+            margin-top: 1rem;
+            font-size: 5rem;
+        }
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,19 @@
+Create JSON file:
+
+- Open terminal inside of project folder
+- ENTER: npm init
+- Fill the data inside
+- change inside JSON file 'scripts' part to configure it for using sass
+- ENTER: run npm sass (to watch for sass changes)
+
+----------------------------------------------------------------------------
+
+Create .gitignore file:
+- Open terminal inside of project folder
+- ENTER: touch .gitignore (this creates gitignore file)
+- enter node_modules folder name to ignore it when using GitHub
+
+----------------------------------------------------------------------------
+
+Before every changes on project ENTER: npm run sass
+
