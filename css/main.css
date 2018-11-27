@@ -171,8 +171,10 @@ main {
     grid-area: bio;
     font-size: 1.3rem; }
   .about-info .job-1 {
+    font-family: cursive, Verdana, sans-serif;
     grid-area: job1; }
   .about-info .job-2 {
+    font-family: cursive, Verdana, sans-serif;
     grid-area: job2; }
   .about-info .job {
     background: #504b3c;
@@ -284,4 +286,6 @@ main {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes div {
+    font-size: 1.3rem; } }
