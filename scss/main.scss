@@ -15,7 +15,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Sedgwick Ave', cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+    line-height: 1.5; 
 }
 
 // Styling of headings
@@ -111,12 +111,14 @@ main {
     }
 
     .job-1 {
+        font-family: cursive, Verdana, sans-serif;
         grid-area: job1;
     }
 
     .job-2 {
+        font-family: cursive, Verdana, sans-serif;
         grid-area: job2;
-    }
+    } 
 
     .job {
         background: lighten($primary-color, 5);
