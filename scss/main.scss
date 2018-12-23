@@ -141,14 +141,15 @@ main {
     // Image styling and hover over image styling
     img {
         width: 100%;
-
         border: 3px #fff solid;
+        transition: transform .2s;
 
         &:hover {
-            opacity: 0.5;
+            opacity: 0.9;
             border-color: $secondary-color;
             @include easeOut;
-        }
+            transform: scale(1.5);            
+        }        
     }
 }
 
