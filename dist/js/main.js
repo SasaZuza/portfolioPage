@@ -36,3 +36,48 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+// Functions for typed text effects on all pages
+$(document).ready(function () {
+    'use strict';  
+  
+    var typedIndex = $(".typed-index");  
+    $(function () {
+        typedIndex.typed({
+        strings: ["Full-Stack Web Developer"],
+        typeSpeed: 100,
+        loop: true,
+      });
+    });
+
+
+    var typedAbout = $(".typed-about");  
+    $(function () {
+        typedAbout.typed({
+        strings: ["Few things about me:"],
+        typeSpeed: 100,
+        loop: true,
+      });
+    });
+
+
+    var typedWork = $(".typed-work");  
+    $(function () {
+        typedWork.typed({
+        strings: ["Check out some of my projects:"],
+        typeSpeed: 100,
+        loop: true,
+      });
+    });
+
+
+    var typedContact = $(".typed-contact");  
+    $(function () {
+        typedContact.typed({
+        strings: ["How to reach me:"],
+        typeSpeed: 100,
+        loop: true,
+      });
+    });
+
+  });
