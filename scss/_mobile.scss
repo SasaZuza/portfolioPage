@@ -8,6 +8,15 @@
 }
 
 // Desktops & Laptops
+
+#myChart {
+    height:100%;
+    width:100%; 
+    min-height:150px;
+    min-width: 350px;
+                     
+}  
+
 @include mediaLg {
     .projects {
         grid-template-columns: repeat(3, 1fr);
@@ -93,6 +102,13 @@
             font-size: 5rem;
         }
     }
+
+    #myChart {
+        height:100%;
+        width:100%; 
+        min-height:150px;
+        min-width: 310px;                  
+    } 
 
     .projects {
         grid-template-columns: 1fr;

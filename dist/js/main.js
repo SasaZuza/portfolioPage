@@ -101,7 +101,7 @@ $(document).ready(function () {
     },
     scaleK : {
       values : '0:7:1',
-      labels : ['HTML','CSS','Bootstramp','Sass', 'Java Script', 'React', 'Java', 'MYSQL' ],
+      labels : ['HTML','CSS','Sass', 'Bootstramp', 'Java Script', 'React', 'Java', 'MYSQL' ],
       item : {
         fontColor : 'white',
         backgroundColor : "#ee991a",
@@ -128,7 +128,7 @@ $(document).ready(function () {
     },
     series : [
       {
-        values : [85, 85, 80, 65, 70, 50, 40, 50],
+        values : [85, 80, 85, 65, 70, 50, 40, 50],
         text:'farm',
         backgroundColor : "#ee991a"
       },
