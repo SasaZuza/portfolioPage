@@ -37,6 +37,7 @@ function toggleMenu() {
     }
 }
 
+
 // Functions for typed text effects on all pages
 $(document).ready(function () {
     'use strict';  
@@ -80,4 +81,64 @@ $(document).ready(function () {
       });
     });
 
+  });
+
+
+  // Zing chart configuration
+  var myConfig = {
+    type : 'radar',
+    backgroundColor : "rgb(65, 61, 49)",
+    plot : {
+      aspect : 'area',
+      animation: {
+        effect:3,
+        sequence:1,
+        speed:700
+      }
+    },
+    scaleV : {
+      visible : false
+    },
+    scaleK : {
+      values : '0:7:1',
+      labels : ['HTML','CSS','Bootstramp','Sass', 'Java Script', 'React', 'Java', 'MYSQL' ],
+      item : {
+        fontColor : 'white',
+        backgroundColor : "#ee991a",
+        borderColor : "#aeaeae",
+        borderWidth : 1,
+        padding : '5 10',
+        borderRadius : 10
+      },
+      refLine : {
+        lineColor : '#c10000'
+      },
+      tick : {
+        lineColor : '#59869c',
+        lineWidth : 2,
+        lineStyle : 'dotted',
+        size : 20
+      },
+      guide : {
+        lineColor : "#607D8B",
+        lineStyle : 'solid',
+        alpha : 0.3,
+        backgroundColor : "#0CCE6B #EF2D56"
+      }
+    },
+    series : [
+      {
+        values : [85, 85, 80, 65, 70, 50, 40, 50],
+        text:'farm',
+        backgroundColor : "#ee991a"
+      },
+      
+    ]
+  };
+  
+  zingchart.render({ 
+      id : 'myChart', 
+      data : myConfig, 
+      height: '100%', 
+      width: '100%' 
   });

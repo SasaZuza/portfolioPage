@@ -88,12 +88,16 @@ main {
 
 // About page styling:
 
+
+
+
 .about-info {
     display: grid;
     grid-gap: 30px;
     margin: 0 8% 0 8%;
     grid-template-areas:
         'bioimage bio '
+        'skils radar-chart '
         'job1 job2 ';
     grid-template-columns: repeat(2, 1fr);
     // Visual representation of page content
@@ -110,20 +114,45 @@ main {
         font-size: 1.3rem;
     }
 
+    .skils{
+        grid-area: skils;
+
+        .skils-title {
+            color: $secondary-color;
+        }
+    }
+
+    .radar-chart {
+        grid-area: radar-chart;        
+    } 
+    #myChart {
+        height:100%;
+        width:100%;
+        min-height:400px;      
+    }
+    
     .job-1 {
         font-family: cursive, Verdana, sans-serif;
-        grid-area: job1;
+        grid-area: job1;           
     }
 
     .job-2 {
         font-family: cursive, Verdana, sans-serif;
-        grid-area: job2;
+        grid-area: job2;        
     } 
 
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
+        
+        h2 {
+            font-style: italic; 
+        }
+
+        h4 {
+            color: $secondary-color;
+        }
     }
 
     // Styling of those sections
