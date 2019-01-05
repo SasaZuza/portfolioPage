@@ -178,8 +178,8 @@ main {
     grid-area: radar-chart; }
   .about-info #myChart {
     height: 100%;
-    width: 100%;
-    min-height: 400px; }
+    width: 110%;
+    min-height: 350px; }
   .about-info .job-1 {
     font-family: cursive, Verdana, sans-serif;
     grid-area: job1; }
@@ -257,6 +257,12 @@ main {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
+#myChart {
+  height: 100%;
+  width: 100%;
+  min-height: 150px;
+  min-width: 350px; }
+
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
@@ -301,6 +307,11 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
+  #myChart {
+    height: 100%;
+    width: 100%;
+    min-height: 150px;
+    min-width: 310px; }
   .projects {
     grid-template-columns: 1fr; }
   .boxes div {
