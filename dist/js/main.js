@@ -51,11 +51,10 @@ $(document).ready(function () {
       });
     });
 
-
     var typedAbout = $(".typed-about");  
     $(function () {
         typedAbout.typed({
-        strings: ["Something about me:"],
+        strings: ["Few words about me:"],
         typeSpeed: 100,
         loop: true,
       });
