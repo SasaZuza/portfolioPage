@@ -55,7 +55,7 @@ $(document).ready(function () {
     var typedAbout = $(".typed-about");  
     $(function () {
         typedAbout.typed({
-        strings: ["Few things about me:"],
+        strings: ["Something about me:"],
         typeSpeed: 100,
         loop: true,
       });
