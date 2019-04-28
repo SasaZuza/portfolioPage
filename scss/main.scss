@@ -15,8 +15,8 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Sedgwick Ave', cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5; 
-    
+    line-height: 1.5;
+
 }
 
 // Styling of headings
@@ -80,9 +80,9 @@ main {
         // Devide home page into two areas
         display: grid;
         grid-template-areas:
-        'page-title code-biography';        
-        grid-template-columns: 60% 40%; 
-        overflow: hidden; 
+            'page-title code-biography';
+        grid-template-columns: 60% 40%;
+        overflow: hidden;
 
         h1 {
             margin-top: 20vh;
@@ -92,25 +92,26 @@ main {
 
 // Code biography styling
 
-.code-biography {        
+.code-biography {
     margin-top: 10%;
-    margin-right: 5%;      
-    background-color: rgb(77, 68, 68); 
+    margin-right: 5%;
+    background-color: rgb(77, 68, 68);
     text-align: left;
-    font-size: 1.1rem;   
+    font-size: 1.1rem;
 }
 
 .source-text {
-    color:  $secondary-color;     
+    color: $secondary-color;
 }
 
 .var {
     color: #2c81e3;
 }
 
-.bio-title, .obj {
-    color:white; 
-} 
+.bio-title,
+.obj {
+    color: white;
+}
 
 
 
@@ -139,7 +140,7 @@ main {
         font-size: 1.3rem;
     }
 
-    .skils{
+    .skils {
         grid-area: skils;
 
         .skils-title {
@@ -148,31 +149,32 @@ main {
     }
 
     .radar-chart {
-        grid-area: radar-chart;        
-    } 
+        grid-area: radar-chart;
+    }
+
     #myChart {
-        height:100%;
-        width:110%; 
-        min-height:350px;                 
-    } 
-    
+        height: 100%;
+        width: 110%;
+        min-height: 350px;
+    }
+
     .job-1 {
         font-family: cursive, Verdana, sans-serif;
-        grid-area: job1;           
+        grid-area: job1;
     }
 
     .job-2 {
         font-family: cursive, Verdana, sans-serif;
-        grid-area: job2;        
-    } 
+        grid-area: job2;
+    }
 
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
-        
+
         h2 {
-            font-style: italic; 
+            font-style: italic;
         }
 
         h4 {
@@ -202,8 +204,8 @@ main {
             opacity: 0.9;
             border-color: $secondary-color;
             @include easeOut;
-            transform: scale(1.5);            
-        }        
+            transform: scale(1.5);
+        }
     }
 }
 
@@ -262,6 +264,105 @@ main {
                 color: set-text-color($secondary-color);
             }
         }
+    }
+}
+
+// Styling of contact form
+
+
+
+.container-form {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.brand {
+    text-align: center;
+}
+
+.brand span {
+    color: $secondary-color;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba($secondary-color, 0.7);
+}
+
+.wrapper>* {
+    padding: 1em;
+}
+
+.contact {
+    background: $secondary-color;
+}
+
+/* FORM STYLES */
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.contact form label {
+    display: block;
+}
+
+.contact form p {
+    margin: 0;
+}
+
+.contact form .full {
+    grid-column: 1 / 3;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid $primary-color;
+}
+
+.contact form button {
+    width: 40%;
+    padding: 1em;
+    border: 1px solid $primary-color;
+}
+
+.contact form button {
+    background: #c9e6ff;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+    background: #92bde7;
+    color: $secondary-color;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper>* {
+        padding: 2em;
+    }
+
+    .company-info h3,
+    .company-info ul,
+    .brand {
+        text-align: left;
+    }
+
+    .sub-button {
+        text-align: center;
     }
 }
 
