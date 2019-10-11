@@ -1,16 +1,15 @@
-$primary-color: rgb(65, 61, 49); 
-$secondary-color: #ee991a;  
+$primary-color: rgb(65, 61, 49);
+$secondary-color: #ee991a;
 $show-home-image: true;
-$home-image: url(../img/back3.jpg); 
-$background-opacity: 0.8;
-
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.9;
 
 // Mixin in Sass that has styling for color transition
 @mixin easeOut {
-    transition: all 1.0s ease-out;
+    transition: all 0.7s ease-out;
 }
 
-// Mixin for adding bg image and image over it with some opacity (psudo element '&:after') 
+// Mixin for adding bg image and image over it with some opacity (pseudo element '&:after')
 @mixin background {
     @if $show-home-image {
         &#bg-img {
@@ -24,7 +23,7 @@ $background-opacity: 0.8;
                 top: 0;
                 right: 0;
                 width: 100%;
-                height: 180%;
+                height: 110%;
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
             }
@@ -42,7 +41,6 @@ $background-opacity: 0.8;
         @return #fff;
     }
 }
-
 
 // Media Query Mixins for responsivnes of page - small, medium large and xtra large devices
 // We will add css for that in separate partial (that is _mobile.scss partial)

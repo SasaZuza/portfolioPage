@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 1.0s ease-out; }
+  transition: all 0.7s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -42,13 +42,13 @@
     background: rgba(50, 47, 38, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: rgba(65, 61, 49, 0.9);
     transform: translate3d(0, 100%, 0);
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -59,7 +59,7 @@
       border: solid 3px #ee991a; }
   .menu .nav-item {
     transform: translate3d(1900px, 0, 0);
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -73,7 +73,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
     .menu .nav-link:hover {
       color: #ee991a; }
 
@@ -97,10 +97,10 @@ body {
   color: #fff;
   height: 100vh;
   margin: 0;
-  font-family: 'Sedgwick Ave', cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Varela Round', sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/back3.jpg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -109,19 +109,19 @@ body {
       top: 0;
       right: 0;
       width: 100%;
-      height: 180%;
+      height: 110%;
       z-index: -1;
-      background: rgba(65, 61, 49, 0.8); }
+      background: rgba(65, 61, 49, 0.9); }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 500; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 6.0rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -145,12 +145,12 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.5rem; }
       main .icons a:hover {
         color: #ee991a;
-        transition: all 1.0s ease-out; }
+        transition: all 0.7s ease-out; }
   main#home {
     display: grid;
     grid-template-areas: 'page-title code-biography';
@@ -160,6 +160,7 @@ main {
       margin-top: 20vh; }
 
 .code-biography {
+  font-family: 'Varela Round', sans-serif;
   margin-top: 10%;
   margin-right: 5%;
   background-color: #4d4444;
@@ -226,7 +227,7 @@ main {
     .projects img:hover {
       opacity: 0.9;
       border-color: #ee991a;
-      transition: all 1.0s ease-out;
+      transition: all 0.7s ease-out;
       transform: scale(1.5); }
 
 .btn, .btn-dark, .btn-light {
@@ -237,7 +238,7 @@ main {
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #ee991a;
     color: #000;
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
 
 .btn-dark {
   background: black;
@@ -258,7 +259,7 @@ main {
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    transition: all 1.0s ease-out; }
+    transition: all 0.7s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #ee991a;
