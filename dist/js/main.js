@@ -5,7 +5,7 @@ const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
 
-// Set Initial State Of Menu - by default manu will be closed so it's false
+// Set Initial State Of Menu - by default menu will be closed so it's false
 let showMenu = false;
 
 // When button is clicked click event and function bellow is activated

@@ -6,7 +6,7 @@ $background-opacity: 0.9;
 
 // Mixin in Sass that has styling for color transition
 @mixin easeOut {
-    transition: all 0.7s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 // Mixin for adding bg image and image over it with some opacity (pseudo element '&:after')
@@ -23,9 +23,11 @@ $background-opacity: 0.9;
                 top: 0;
                 right: 0;
                 width: 100%;
-                height: 110%;
+                height: 100vh;
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
+                margin: 0;
+                padding: 4.55rem;
             }
         }
     }

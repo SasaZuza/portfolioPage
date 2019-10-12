@@ -5,7 +5,8 @@
     right: 35px;
     top: 35px;
     cursor: pointer;
-    @include easeOut; // Styling lines inside of button
+    // Styling lines inside of button
+    @include easeOut;
 
     .btn-line {
         width: 28px;

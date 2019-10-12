@@ -8,12 +8,18 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     @include background;
     background: $primary-color;
     color: set-text-color($primary-color);
     height: 100vh;
     margin: 0;
+    padding: 0;
     font-family: 'Varela Round', sans-serif;
     line-height: 1.5;
 
@@ -97,11 +103,11 @@ main {
 
 .code-biography {
     font-family: 'Varela Round', sans-serif;
-    margin-top: 10%;
+    margin-top: 12%;
     margin-right: 5%;
     background-color: rgb(77, 68, 68);
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .source-text {
