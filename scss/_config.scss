@@ -44,8 +44,15 @@ $background-opacity: 0.9;
     }
 }
 
-// Media Query Mixins for responsivnes of page - small, medium large and xtra large devices
+// Media Query Mixin for responsiveness of page - small, medium large and extra large devices
 // We will add css for that in separate partial (that is _mobile.scss partial)
+
+@mixin mediaExSm {
+    @media screen and (max-width: 374px) {
+        @content;
+    }
+}
+
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;
@@ -53,13 +60,13 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaMd {
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 768px) {
         @content;
     }
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 961px) and (max-width: 1170px) {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
         @content;
     }
 }

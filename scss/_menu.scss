@@ -1,143 +1,147 @@
 // Menu button styling:
 .menu-btn {
-    position: absolute;
-    z-index: 3;
-    right: 35px;
-    top: 35px;
-    cursor: pointer;
-    // Styling lines inside of button
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  // Styling lines inside of button
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: set-text-color($primary-color);
     @include easeOut;
+  }
+
+  // Rotates menu button when clicked and makes it look like 'X'
+  &.close {
+    transform: rotate(180deg);
 
     .btn-line {
-        width: 28px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background: set-text-color($primary-color);
-        @include easeOut;
+
+      // Line 1 - Rotate and reposition
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - Rotate and reposition
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
     }
-
-    // Rotates menu button when clicked and makes it look like 'X'
-    &.close {
-        transform: rotate(180deg);
-
-        .btn-line {
-
-            // Line 1 - Rotate and reposition
-            &:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            // Line 2 - Hide
-            &:nth-child(2) {
-                opacity: 0;
-            }
-
-            // Line 3 - Rotate and reposition
-            &:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
-        }
-    }
+  }
 }
 
-// Menu overlay styling:
+// Menu overlay styling and it's child elements :
 .menu {
-    // Overlay by default
-    position: fixed;
-    top: 0;
-    width: 100%;
-    visibility: hidden; // After button is clicked content is visiable (calling JS '.show' class)
+  // Overlay by default
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  // After button is clicked content is visible (calling JS '.show' class)
+  &.show {
+    visibility: visible;
+  }
+
+  // Styling of those classes
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  // This is styling only for .menu-nav class
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(darken($primary-color, 5), 0.9);
+    list-style: none;
+    // Puts the nav menu from the top to the screen
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
 
     &.show {
-        visibility: visible;
+      // Slide in from top after the show class is activated
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Branding Side styling
+  &-branding {
+    background: rgba($primary-color, 0.9);
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from bottom after the show class is activated
+      transform: translate3d(0, 0, 0);
     }
 
-    // Styling of those classes
-    &-branding,
-    &-nav {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        width: 50%;
-        height: 100vh;
-        overflow: hidden;
+    // Styling image for portfolio
+    .portrait {
+      width: 240px;
+      height: 240px;
+      background-size: cover;
+      background: url('../img/Profile-big.jpg');
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    // We put nav items on right side
+    transform: translate3d(1900px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from right after activating show class
+      transform: translate3d(0, 0, 0);
     }
 
-    // This is styling only for .menu-nav class
-    &-nav {
-        margin: 0;
-        padding: 0;
-        background: rgba(darken($primary-color, 5), 0.9);
-        list-style: none;
-        transform: translate3d(0, -100%, 0); // Puts the nav menu to top
-        @include easeOut;
-
-        &.show {
-            // Slide in from top after the show class is activated
-            transform: translate3d(0, 0, 0);
-        }
+    // When menu is opened HOME is colored in this color
+    &.current>a {
+      color: $secondary-color;
     }
+  }
 
-    // Branding Side styling
-    &-branding {
-        background: rgba($primary-color, 0.9);
-        transform: translate3d(0, 100%, 0);
-        @include easeOut;
+  // Styling of menu links
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: set-text-color($primary-color);
+    text-decoration: none;
+    @include easeOut;
 
-        &.show {
-            // Slide in from bottom after the show class is activated
-            transform: translate3d(0, 0, 0);
-        }
-
-        // Styling of image for portfolio
-        .portrait {
-            width: 250px;
-            height: 250px;
-            background: url("../img/Profile3.jpg");
-            border-radius: 50%;
-            border: solid 3px $secondary-color;
-        }
+    // When hovered over other menu links change color
+    &:hover {
+      color: $secondary-color;
     }
-
-    .nav-item {
-        transform: translate3d(1900px, 0, 0); // We put nav items on right side
-        @include easeOut;
-
-        &.show {
-            // Slide in from right after activating show class
-            transform: translate3d(0, 0, 0);
-        }
-
-        // When menu is opened HOME is colored in this color
-        &.current>a {
-            color: $secondary-color;
-        }
-    }
-
-    // Styling of menu links
-    .nav-link {
-        display: inline-block;
-        position: relative;
-        font-size: 30px;
-        text-transform: uppercase;
-        padding: 1rem 0;
-        font-weight: 300;
-        color: set-text-color($primary-color);
-        text-decoration: none;
-        @include easeOut;
-
-        // When hovered over other menu links change color
-        &:hover {
-            color: $secondary-color;
-        }
-    }
+  }
 }
 
 // Delay each nav item to slide by 0.1s with this loop
 @for $x from 1 through 4 {
-    .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
-    }
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
 }

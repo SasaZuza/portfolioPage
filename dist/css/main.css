@@ -52,9 +52,10 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/Profile3.jpg");
+      width: 240px;
+      height: 240px;
+      background-size: cover;
+      background: url("../img/Profile-big.jpg");
       border-radius: 50%;
       border: solid 3px #ee991a; }
   .menu .nav-item {
@@ -191,6 +192,7 @@ main {
   grid-template-areas: 'bioimage bio ' 'skils radar-chart ' 'job1 job2 ';
   grid-template-columns: repeat(2, 1fr); }
   .about-info .bio-image {
+    width: 250px;
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
@@ -364,11 +366,11 @@ main {
   min-height: 150px;
   min-width: 350px; }
 
-@media screen and (min-width: 961px) and (max-width: 1170px) {
+@media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
@@ -408,20 +410,68 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
+  body#bg-img:after {
+    height: 140vh; }
   main {
-    padding: 2rem; }
+    padding: 0.75rem; }
     main#home {
       display: block; }
     main #home h1 {
-      margin-top: 10vh; }
+      margin-top: 7vh; }
     main .lg-heading {
       margin-top: 1rem;
-      font-size: 5rem; }
+      font-size: 4.5rem; }
+    main .sm-heading {
+      font-size: 1.2rem; }
   .code-biography {
-    width: 105%;
+    text-align: left;
+    width: 100%;
     margin-top: 10%;
     margin-right: 0;
     padding-left: 0;
+    font-size: 0.9rem; }
+  .menu-branding {
+    height: 40vh; }
+  .menu-nav {
+    height: 60vh; }
+  .menu .nav-link {
+    font-size: 1.1rem; }
+  #myChart {
+    height: 100%;
+    width: 100%;
+    min-height: 150px;
+    min-width: 310px; }
+  .projects {
+    grid-template-columns: 1fr; }
+  .boxes div {
+    font-size: 1.3rem; } }
+
+@media screen and (max-width: 374px) {
+  body#bg-img:after {
+    height: 140vh; }
+  main {
+    padding: 0.4rem; }
+    main#home {
+      display: block; }
+    main #home h1 {
+      margin-top: 7vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 4.5rem; }
+    main .sm-heading {
+      font-size: 1.2rem; }
+  .code-biography {
+    text-align: left;
+    width: 100%;
+    margin-top: 10%;
+    margin-right: 0;
+    padding-left: 0;
+    font-size: 0.8rem; }
+  .menu-branding {
+    height: 40vh; }
+  .menu-nav {
+    height: 60vh; }
+  .menu .nav-link {
     font-size: 1rem; }
   #myChart {
     height: 100%;

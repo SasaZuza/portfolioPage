@@ -3,6 +3,7 @@
 @import 'menu';
 
 
+
 // Makes everything to be threated like in box-model
 * {
     box-sizing: border-box;
@@ -41,7 +42,7 @@ h3 {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
         // Lighten the color in Sass
-        // First parametar is color we want to lighten and second is how much we want to lighten and opacity
+        // First parameter is color we want to lighten and second is how much we want to lighten and opacity
         background: rgba(lighten($primary-color, 2), 0.5);
 
     }
@@ -139,6 +140,7 @@ main {
     // Visual representation of page content
 
     .bio-image {
+        width: 250px;
         grid-area: bioimage;
         margin: auto;
         border-radius: 50%;
@@ -386,5 +388,5 @@ main {
     height: 60px;
 }
 
-
+// This is where we need to import this mixin to work properly 
 @import 'mobile';
