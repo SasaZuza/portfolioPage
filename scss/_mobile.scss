@@ -2,12 +2,20 @@
 
 // Widescreens
 @include mediaXl {
+
+    // Styling of main page
+    body {
+        &#bg-img {
+            &:after {
+                height: 105vh;
+            }
+        }
+    }
+
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-// Desktops & Laptops
 
 #myChart {
     height: 100%;
@@ -17,7 +25,41 @@
 
 }
 
+// Desktops & Laptops
 @include mediaLg {
+
+    // Styling of main page
+    body {
+        &#bg-img {
+            &:after {
+                height: 115vh;
+            }
+        }
+    }
+
+    main {
+        &#home {
+            // Devide home page into two areas
+            display: grid;
+            grid-template-areas:
+                'page-title code-biography';
+            grid-template-columns: 50% 50%;
+            overflow: hidden;
+
+            h1 {
+                margin-top: 20vh;
+            }
+        }
+    }
+
+    // Code biography styling
+    .code-biography {
+        margin-top: 10%;
+        margin-right: 0;
+        padding-left: 0%;
+        font-size: 0.9rem;
+    }
+
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -26,8 +68,18 @@
 // Tablets & Small Laptops
 @include mediaMd {
 
+    // Styling of main page
+    body {
+        &#bg-img {
+            &:after {
+                height: 205vh;
+            }
+        }
+    }
+
     // Position text and items on center and sets up margins
     main {
+        padding: 5%;
         align-items: center;
         text-align: center;
 
@@ -41,13 +93,15 @@
         }
     }
 
+    // Code biography styling
     .code-biography {
         margin-top: 10%;
         margin-right: 0;
-        padding-left: 15%;
-        font-size: 1.2rem;
+        padding-left: 5%;
+        font-size: 1.1rem;
     }
 
+    // Menu styling
     // Sets up menu items and branding across all screen in width
     ul.menu-nav,
     div.menu-branding {
@@ -63,19 +117,23 @@
 
     // menu items take 75% of screen and after activating come from the side
     .menu-nav {
-        height: 75vh;
+        height: 60vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
+
+        .nav-link {
+            font-size: 1.2rem;
+        }
     }
 
     // menu branding takes 25% of screen and after activating come from the side
     .menu-branding {
-        height: 25vh;
+        height: 40vh;
         transform: translate3d(100%, 0, 0);
 
         // Setting profile image for smaller screen
         .portrait {
-            background: url('../img/ProfilSmall.jpg');
+            background: url('../img/Profile-small.jpg');
             width: 150px;
             height: 150px;
         }
