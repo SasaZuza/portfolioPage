@@ -185,45 +185,60 @@ main {
 .obj {
   color: white; }
 
+.lg-heading-about {
+  font-size: 4rem; }
+
 .about-info {
   display: grid;
-  grid-gap: 30px;
-  margin: 0 8% 0 8%;
+  grid-gap: 1.2rem;
+  margin: 0 2% 0 2%;
   grid-template-areas: 'bioimage bio ' 'skils radar-chart ' 'job1 job2 ';
   grid-template-columns: repeat(2, 1fr); }
   .about-info .bio-image {
-    width: 250px;
+    max-width: 300px;
+    max-height: 300px;
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: #ee991a 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.3rem; }
+    font-size: 1.2rem; }
   .about-info .skils {
-    grid-area: skils; }
+    grid-area: skils;
+    font-size: 1.1rem; }
     .about-info .skils .skils-title {
       color: #ee991a; }
   .about-info .radar-chart {
     grid-area: radar-chart; }
   .about-info #myChart {
-    height: 100%;
-    width: 110%;
-    min-height: 350px; }
+    min-height: 100%;
+    width: 100%; }
   .about-info .job-1 {
-    font-family: cursive, Verdana, sans-serif;
     grid-area: job1; }
   .about-info .job-2 {
-    font-family: cursive, Verdana, sans-serif;
     grid-area: job2; }
   .about-info .job {
     background: #504b3c;
+    margin-top: 1rem;
     padding: 0.5rem;
     border-bottom: #ee991a 5px solid; }
-    .about-info .job h2 {
+    .about-info .job .skils-title {
+      margin: 0.5rem 0;
+      padding: 0; }
+    .about-info .job h3 {
       font-style: italic; }
     .about-info .job h4 {
       color: #ee991a; }
+
+#main-footer .author {
+  vertical-align: center;
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+
+#main-footer .resources {
+  font-size: 0.7rem; }
 
 .projects {
   display: grid;
@@ -356,7 +371,7 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (min-width: 1071px) {
+@media screen and (min-width: 1171px) {
   body#bg-img:after {
     height: 105vh; }
   .projects {

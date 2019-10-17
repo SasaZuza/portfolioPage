@@ -125,22 +125,26 @@ main {
 }
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////
 // About page styling:
+.lg-heading-about {
+    font-size: 4rem;
+}
 
 .about-info {
     display: grid;
-    grid-gap: 30px;
-    margin: 0 8% 0 8%;
+    grid-gap: 1.2rem;
+    margin: 0 2% 0 2%;
     grid-template-areas:
         'bioimage bio '
         'skils radar-chart '
         'job1 job2 ';
-    grid-template-columns: repeat(2, 1fr);
     // Visual representation of page content
+    grid-template-columns: repeat(2, 1fr);
 
     .bio-image {
-        width: 250px;
+        max-width: 300px;
+        max-height: 300px;
         grid-area: bioimage;
         margin: auto;
         border-radius: 50%;
@@ -149,11 +153,12 @@ main {
 
     .bio {
         grid-area: bio;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .skils {
         grid-area: skils;
+        font-size: 1.1rem;
 
         .skils-title {
             color: $secondary-color;
@@ -165,27 +170,30 @@ main {
     }
 
     #myChart {
-        height: 100%;
-        width: 110%;
-        min-height: 350px;
+        min-height: 100%;
+        width: 100%;
     }
 
     .job-1 {
-        font-family: cursive, Verdana, sans-serif;
         grid-area: job1;
     }
 
     .job-2 {
-        font-family: cursive, Verdana, sans-serif;
         grid-area: job2;
     }
 
     .job {
         background: lighten($primary-color, 5);
+        margin-top: 1rem;
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
 
-        h2 {
+        .skils-title {
+            margin: 0.5rem 0;
+            padding: 0;
+        }
+
+        h3 {
             font-style: italic;
         }
 
@@ -193,11 +201,22 @@ main {
             color: $secondary-color;
         }
     }
-
-    // Styling of those sections
 }
 
+#main-footer {
+    .author {
+        vertical-align: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
 
+    .resources {
+        font-size: 0.7rem;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
 // Work and Projects styling
 
 // Sets grid for projects
