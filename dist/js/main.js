@@ -91,16 +91,16 @@ var myConfig = {
       'Bootstramp',
       'Java Script',
       'React',
-      'Java',
-      'MYSQL'
+      'Vue',
+      'MongoDB'
     ],
     item: {
       fontColor: 'white',
       backgroundColor: '#ee991a',
       borderColor: '#aeaeae',
       borderWidth: 1,
-      padding: '5 10',
-      borderRadius: 10
+      padding: '5 5',
+      borderRadius: 25
     },
     refLine: {
       lineColor: '#c10000'
@@ -109,7 +109,7 @@ var myConfig = {
       lineColor: '#59869c',
       lineWidth: 2,
       lineStyle: 'dotted',
-      size: 20
+      size: 15
     },
     guide: {
       lineColor: '#607D8B',
@@ -120,7 +120,7 @@ var myConfig = {
   },
   series: [
     {
-      values: [85, 80, 85, 65, 70, 50, 40, 50],
+      values: [85, 80, 85, 65, 70, 70, 50, 60],
       text: 'farm',
       backgroundColor: '#ee991a'
     }

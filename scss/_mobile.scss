@@ -60,6 +60,49 @@
         font-size: 0.9rem;
     }
 
+    // About Me page styling
+    .lg-heading-about {
+        font-size: 3.5rem;
+    }
+
+    .about-info {
+        margin: 0 1.5% 0 1.5%;
+
+        .bio-image {
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+        }
+
+        .skils {
+            font-size: 1rem;
+        }
+
+        .job {
+
+            .skils-title {
+                font-size: 0.9rem;
+            }
+
+            h3 {
+                font-style: italic;
+                font-size: 1rem;
+            }
+
+            h4 {
+                color: $secondary-color;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+    }
+
+
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -139,7 +182,7 @@
         }
     }
 
-    // This styles about page for md devices
+    // About me page for md devices
     .about-info {
         grid-template-areas:
             'bioimage'
@@ -148,8 +191,58 @@
             'radar-chart'
             'job1'
             'job2';
-
         grid-template-columns: 1fr;
+        margin: 0 1.5% 0 1.5%;
+
+        .bio-image {
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+        }
+
+        .skils {
+            font-size: 1rem;
+        }
+
+        .radar-container {
+            margin: auto;
+            text-align: center;
+        }
+
+        .radar-chart {
+            grid-area: radar-chart;
+        }
+
+        #myChart {
+            grid-area: radar-chart;
+            height: 400px;
+            width: 400px;
+        }
+
+        .job {
+            text-align: left;
+
+            .skils-title {
+                font-size: 0.9rem;
+            }
+
+            h3 {
+                text-align: center;
+                font-style: italic;
+                font-size: 1rem;
+            }
+
+            h4 {
+                color: $secondary-color;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
     }
 
     .projects {
@@ -215,11 +308,63 @@
         }
     }
 
-    #myChart {
-        height: 100%;
-        width: 100%;
-        min-height: 150px;
-        min-width: 310px;
+    // About me page for md devices
+    .lg-heading-about {
+        font-size: 3rem;
+    }
+
+    .about-info {
+        margin: 0 1% 0 1%;
+
+        .bio-image {
+            max-width: 240px;
+            max-height: 240px;
+        }
+
+        .bio {
+            font-size: 0.9rem;
+        }
+
+        .skils {
+            font-size: 0.9rem;
+        }
+
+        .radar-container {
+            margin: auto;
+            text-align: center;
+        }
+
+        .radar-chart {
+            grid-area: radar-chart;
+        }
+
+        #myChart {
+            grid-area: radar-chart;
+            height: 350px;
+            width: 350px;
+        }
+
+        .job {
+            text-align: left;
+
+            .skils-title {
+                font-size: 0.9rem;
+            }
+
+            h3 {
+                text-align: center;
+                font-style: italic;
+                font-size: 1rem;
+            }
+
+            h4 {
+                color: $secondary-color;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
     }
 
     .projects {
@@ -228,6 +373,13 @@
 
     .boxes div {
         font-size: 1.3rem;
+    }
+
+    // Footer styling
+    #main-footer {
+        font-size: 0.7rem;
+        padding: 1rem;
+        height: auto;
     }
 }
 
@@ -289,11 +441,52 @@
         }
     }
 
-    #myChart {
-        height: 100%;
-        width: 100%;
-        min-height: 150px;
-        min-width: 310px;
+    // About me page for md devices
+    .lg-heading-about {
+        font-size: 2.7rem;
+    }
+
+    .about-info {
+        margin: 0 1% 0 1%;
+
+        .bio-image {
+            max-width: 220px;
+            max-height: 220px;
+        }
+
+        .bio {
+            font-size: 0.9rem;
+        }
+
+        .skils {
+            font-size: 0.9rem;
+        }
+
+        .radar-container {
+            display: none;
+        }
+
+        .job {
+            text-align: left;
+
+            .skils-title {
+                font-size: 0.8rem;
+            }
+
+            h3 {
+                text-align: center;
+                font-style: italic;
+                font-size: 1rem;
+            }
+
+            h4 {
+                color: $secondary-color;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
     }
 
     .projects {
