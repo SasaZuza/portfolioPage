@@ -12,6 +12,11 @@
         }
     }
 
+    // My work page styling
+    .lg-heading-work {
+        font-size: 3.5rem;
+    }
+
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -102,9 +107,26 @@
         }
     }
 
+    // My work page styling
+    .lg-heading-work {
+        font-size: 3.5rem;
+    }
 
     .projects {
         grid-template-columns: repeat(3, 1fr);
+
+        // Image styling and hover over image styling
+        img {
+            height: 9rem;
+        }
+    }
+
+    .name {
+        font-size: 0.95rem;
+    }
+
+    .gitHub {
+        font-size: 0.95rem;
     }
 }
 
@@ -245,8 +267,21 @@
         }
     }
 
+    // Work page styling
+    .lg-heading-work {
+        font-size: 3.5rem;
+    }
+
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .name {
+        font-size: 0.9rem;
+    }
+
+    .gitHub {
+        font-size: 0.9rem;
     }
 }
 
@@ -365,6 +400,11 @@
                 font-size: 0.9rem;
             }
         }
+    }
+
+    // Work page styling
+    .lg-heading-work {
+        font-size: 3rem;
     }
 
     .projects {
@@ -487,6 +527,11 @@
                 font-size: 0.8rem;
             }
         }
+    }
+
+    // Work page styling
+    .lg-heading-work {
+        font-size: 2.7rem;
     }
 
     .projects {
