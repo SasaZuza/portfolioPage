@@ -133,3 +133,53 @@ zingchart.render({
   height: '100%',
   width: '100%'
 });
+
+// Functions for project details toggle buttons
+
+// Tribute page functions
+function blog() {
+  document.getElementById('blogDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function emloyeeMenager() {
+  document.getElementById('employeeDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function eStore() {
+  document.getElementById('storeDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function caffeBar() {
+  document.getElementById('caffeDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function weatherApp() {
+  document.getElementById('weatherDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function randomQuoteMashine() {
+  document.getElementById('quoteDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function jsCalculator() {
+  document.getElementById('calculatorDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}
+
+// Tribute page functions
+function tributePage() {
+  document.getElementById('tributeDiv').style.display = 'block';
+  document.getElementById('projectsList').style.display = 'none';
+}

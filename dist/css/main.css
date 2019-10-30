@@ -90,6 +90,26 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.details {
+  width: 100%;
+  background: #504b3c;
+  padding: 1rem 2rem; }
+
+.project-title {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #ee991a; }
+
+.project-tech,
+.project-purpose {
+  font-size: 1.5rem;
+  color: #ee991a; }
+
+.project-tools {
+  font-size: 1.3rem;
+  font-style: italic; }
+
 * {
   box-sizing: border-box; }
 
@@ -267,7 +287,8 @@ main {
 
 .btn-dark {
   background: black;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
 
 .btn-light {
   background: #c2bdaf;
@@ -291,6 +312,14 @@ main {
       color: #000; }
       .boxes div:hover span {
         color: #000; }
+
+#myDIV.fullscreen {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }
 
 .container-form {
   max-width: 1170px;
@@ -644,3 +673,23 @@ body {
     grid-template-columns: 1fr; }
   .boxes div {
     font-size: 1.3rem; } }
+
+.details {
+  width: 100%;
+  background: #504b3c;
+  padding: 1rem 2rem; }
+
+.project-title {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #ee991a; }
+
+.project-tech,
+.project-purpose {
+  font-size: 1.5rem;
+  color: #ee991a; }
+
+.project-tools {
+  font-size: 1.3rem;
+  font-style: italic; }

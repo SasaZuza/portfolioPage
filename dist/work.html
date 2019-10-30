@@ -54,7 +54,64 @@
         <h1 class="lg-heading-work"> My <span class="text-secondary">Work</span></h1>
         <h2 class="sm-heading"> <span class="typed-work"></span> </h2>
 
-        <div class="projects">
+        <!-- Gatsby blog page desc -->
+        <div id="blogDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1 class="project-title"> Gatsby Cosmetics Blog </h1>
+        <p class="project-tech"> - Tehnologies used: </p>
+        <p class="project-tools"> Gatsby, GraphQL, CSS, Reactstrap, Contentful (as CMS for blog posts) </p>
+        <p class="project-description"> This is a blog page created with Gatsby (framework powered by React) and it's used for creating a 
+        cosmetics blog posts. As a base for frontend is used Gatsby with a combination of the CSS and Reactstrap. 
+        Also for creating this page is used GraphQL and Contentful as CMS for blog posts.</p>
+        <p class="project-purpose"> - Project purpose: <p>
+        <p> Blog page is used for advertisement of the various cosmetic products and writing a modern
+         blog post with multimedia content with the usage of the CMS platform. Clint was satisfied with content 
+         but there is much space for adding additional content (ex. webshop etc.). </p>
+        </div>
+
+        <!-- Employee Menager page desc -->
+        <div id="employeeDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> Employee Menager App </h1>
+        </div>
+
+        <!-- React E-Store page desc -->
+        <div id="storeDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> React E-Store </h1>
+        </div>
+
+        <!-- CaffeBar page desc -->
+        <div id="caffeDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> Caffe Bar Website </h1>
+        </div>
+
+        <!-- React Weather App page desc -->
+        <div id="weatherDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> React Weather App </h1>
+        </div>
+
+        <!-- Random Quote Mashine page desc -->
+        <div id="quoteDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> Random Quote Mashine </h1>
+        </div>
+
+        <!-- JS Calculator page desc -->
+        <div id="calculatorDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> Java Script Calculator </h1>
+        </div>
+
+        <!-- Tribute page desc -->
+        <div id="tributeDiv"  style="display:none;" class="details" >
+        <a href="work.html" class="btn-light" > <i class="fas fa-arrow-alt-circle-left"></i> Back to Projects List </a>
+        <h1> Tribute Page  </h1>
+        </div>
+
+        <div id="projectsList" class="projects">
 
             <div class="item">
                 <a href="#!"> <img src="img/projects/FarmasiBlog.png" alt="Project"> </a>
@@ -63,6 +120,7 @@
                 <a href="https://github.com/SasaZuza/zoricaFarmasiBlog" target="_blank" class="btn-dark gitHub"> <i
                         class="fab fa-github"></i>
                     Github </a>
+                <a type="button" onclick="blog()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>
 
             <div class="item">
@@ -71,6 +129,7 @@
                         class="fas fa-eye"></i> Vue.js EmployeeMenager </a>
                 <a href="https://github.com/SasaZuza/employeeMenager" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i> Github </a>
+                <a type="button" onclick="emloyeeMenager()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>
 
             <div class="item">
@@ -79,6 +138,7 @@
                         class="fas fa-eye"></i> React E-Store </a>
                 <a href="https://github.com/SasaZuza/ReactE-Store" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i> Github </a>
+                <a type="button" onclick="eStore()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>
 
              <div class="item">
@@ -88,6 +148,7 @@
                 <a href="https://github.com/SasaZuza/caffeBarWebsite" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i>
                     Github </a>
+                <a type="button" onclick="caffeBar()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>
 
             <div class="item">
@@ -97,6 +158,7 @@
                 <a href="https://github.com/SasaZuza/ReactWeatherApp" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i>
                     Github </a>
+                <a type="button" onclick="weatherApp()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>           
 
             <div class="item">
@@ -106,6 +168,7 @@
                 <a href="https://github.com/SasaZuza/randomQuoteMashine" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i>
                     Github </a>
+                <a type="button" onclick="randomQuoteMashine()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>
 
             <div class="item">
@@ -115,6 +178,7 @@
                 <a href="https://github.com/SasaZuza/javaScriptCalculator" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i>
                     Github </a>
+                <a type="button" onclick="jsCalculator()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a>
             </div>
 
             <div class="item">
@@ -123,6 +187,7 @@
                         class="fas fa-eye"></i> Tribute Page </a>
                 <a href="https://github.com/SasaZuza/tributePage-MichaelJordan" target="_blank" class="btn-dark"> <i
                         class="fab fa-github"></i> Github </a>
+                <a type="button" onclick="tributePage()" class="btn-dark" > <i class="far fa-clipboard"></i> Summary </a> 
             </div>
 
         </div>
