@@ -11,10 +11,11 @@
   "author": "Sasa Zuza",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "node-sass": "^4.10.0"
+    "gh-pages": "^2.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SasaZuza/portfolioPage.git"
